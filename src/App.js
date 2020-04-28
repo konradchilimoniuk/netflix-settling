@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import MenuBar from './Components/MenuBar'
+import SettleApp from './Components/Settle App/SettleApp'
+import FormOverlay from './Components/Forms/FormOverlay'
+import FileLoader from './Components/FileLoader'
+import NotificationGroup from './Components/Notifications/NotificationGroup';
+import { connect } from 'react-redux';
+
+class App extends React.Component {
+  handleFormToggle = (form) => {
+    setTimeout(() => this.setState({activeForm: form}), 300);
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <MenuBar isInitialized={this.props.isInitialized} />
+
+        {!this.props.isInitialized && <FileLoader />}
+        {this.props.isInitialized && <SettleApp />}
+        {this.props.isInitialized && <FormOverlay handleFormToggle={this.handleFormToggle}/>}
+
+        <NotificationGroup />
+      </React.Fragment>
+      );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    isInitialized: state.isInitialized
+  }
+}
+
+export default connect(mapStateToProps)(App);

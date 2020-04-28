@@ -1,14 +1,28 @@
 {
-  "name": "my-app",
+  "name": "netflix-settling",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "fibers": "^4.0.2",
+    "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-imask": "^6.0.3",
+    "react-input-mask": "^2.0.4",
+    "react-number-format": "^4.4.1",
+    "react-persist": "^1.0.2",
+    "react-redux": "^7.2.0",
+    "react-scripts": "^3.4.1",
+    "react-text-mask": "^5.4.3",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3",
+    "uuid": "^7.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
