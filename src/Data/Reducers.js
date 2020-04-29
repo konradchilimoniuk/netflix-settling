@@ -1,5 +1,6 @@
 import { v4 as uuid } from 'uuid'
 import { PURGE } from 'redux-persist'
+import { languages } from '../Languages/Translations'
 
 import {
     SET_NOTIFICATION, HIDE_NOTIFICATION, REMOVE_NOTIFICATION,
@@ -19,7 +20,7 @@ import {
 
 const initialState = {
     isInitialized: false,
-    language: {id: 'pl', name: 'Polish', text: 'PL'},
+    language: languages[1],
     activeForm: {
         form: '',
         options: undefined

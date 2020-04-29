@@ -63,7 +63,6 @@ class PropertyEditor extends React.Component {
     }
 
     handleChangedValue = () => {
-        console.log(this.state.value);
         if(this.state.value === '') {
             this.setState({ value: this.state.initialValue });
         } else {
