@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Netflix Settling is an app create using React with Redux state management. It helps with settling balance with other users of your Netflix account. This app will give you a summary of all costs of your subscription and what was not returned. [Live version can be viewed here.](https://chilimanjaro.github.io/netflix-settling/)
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+Usage is simple:
+1. Start new editor or upload a JSON file of previously saved data. If you have run this app before, previous state should be persisted in your local storage.
+2. Set initial subscription cost and starting date.
+3. Add other people using your Netflix account to the list.
+4. Add any returns that they have made.
 
-### `npm start`
+## How to change values of properties?
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Editable properties will be bold on hovered. Clicking on them will invoke an input with a mask of each property type.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Data Structure
 
-### `npm test`
+These following properties are available in Redux store and used throughout the app:
+1. _isInitialized_ - tells if editor has been started.
+2. _language_ - tells which language is set (available are: Polish, English)
+3. _activeForm_ - there are to forms available: adding new person, adding new return. This property tells with forms is currently active.
+4. _notifications_ - stores currently visible notifications, eg. errors. Notificiations will be visible on the bottom of the page.
+5. _subscriptionInfo_ - stores information about starting date and subscription cost.
+6. _people_ - stores an array of other Netflix users.
+7. _returns_ - stores an array of all returns. Returns are assigned to people by their IDs.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Used dependencies
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Inputs were created using [IMask](https://imask.js.org/).
+2. Formatted numbers were created using [react-number-format](https://github.com/s-yadav/react-number-format).
+3. IDs are created using [UUID](https://github.com/uuidjs/uuid). It helps maintaining unique IDs for each object globally.
