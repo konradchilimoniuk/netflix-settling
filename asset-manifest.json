@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/netflix-settling/static/css/main.a3f05ea9.chunk.css",
+    "main.js": "/netflix-settling/static/js/main.85e17d1f.chunk.js",
+    "main.js.map": "/netflix-settling/static/js/main.85e17d1f.chunk.js.map",
+    "runtime-main.js": "/netflix-settling/static/js/runtime-main.3e28b552.js",
+    "runtime-main.js.map": "/netflix-settling/static/js/runtime-main.3e28b552.js.map",
+    "static/js/2.74205e17.chunk.js": "/netflix-settling/static/js/2.74205e17.chunk.js",
+    "static/js/2.74205e17.chunk.js.map": "/netflix-settling/static/js/2.74205e17.chunk.js.map",
+    "index.html": "/netflix-settling/index.html",
+    "precache-manifest.ee87c5db00d39f657f04a2da5e68ae53.js": "/netflix-settling/precache-manifest.ee87c5db00d39f657f04a2da5e68ae53.js",
+    "service-worker.js": "/netflix-settling/service-worker.js",
+    "static/css/main.a3f05ea9.chunk.css.map": "/netflix-settling/static/css/main.a3f05ea9.chunk.css.map",
+    "static/js/2.74205e17.chunk.js.LICENSE.txt": "/netflix-settling/static/js/2.74205e17.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e28b552.js",
+    "static/js/2.74205e17.chunk.js",
+    "static/css/main.a3f05ea9.chunk.css",
+    "static/js/main.85e17d1f.chunk.js"
+  ]
+}
