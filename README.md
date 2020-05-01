@@ -1,3 +1,5 @@
+# Netflix Settling
+
 Netflix Settling is an app create using React with Redux state management. It helps with settling balance with other users of your Netflix account. This app will give you a summary of all costs of your subscription and what was not returned. [Live version can be viewed here.](https://chilimanjaro.github.io/netflix-settling/)
 
 ## Usage
